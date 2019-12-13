@@ -6,6 +6,14 @@
 
 class CardGame
 
+  def self.cards_total(cards)
+    total = 0
+    for card in cards
+      total += card.value
+    end
+    return "You have a total of" + total
+  end
+
 
   def checkforAce(card)
     # if card.value = 1
@@ -27,12 +35,16 @@ class CardGame
 # end
 end
 
-def self.cards_total(cards)
+# def self.cards_total(cards)
+def cards_total(cards)
   # total
   total = 0
   for card in cards
     total += card.value
-    return "You have a total of" + total
   end
+    # return "You have a total of" + total
+    return "You have a total of #{total}"
+  end
+
 end
 ```
